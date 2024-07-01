@@ -1,5 +1,5 @@
 import * as utils from './utils.js';
-import logo from './img/logo.svg';
+import logo from './img/Logo.js';
 
 export class VIEW 
 {
@@ -20,7 +20,9 @@ export class VIEW
 		this.canvas 	= document.createElement('canvas');
 		this.canvas.id	= "shader-canvas";
 		this.gl			= this.canvas.getContext('webgl2');
-		this.logo		= utils.htmlToElement(`<img src="${logo}" class="logo" />`);
+	//	this.logo		= utils.htmlToElement(`<img src="${logo}" class="logo" />`);
+		this.logo		= utils.htmlToElement(`<div class="logo">${logo}</div>`);
+
 
 		if (!this.gl) 											{ console.error('need webgl2'); 					}
 		if (!this.gl.getExtension('EXT_color_buffer_float')) 	{ console.error('need EXT_color_buffer_float'); 	}

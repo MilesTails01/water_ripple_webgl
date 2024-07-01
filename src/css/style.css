@@ -66,6 +66,10 @@ canvas {
 	pointer-events: none;
 }
 
+.logo svg {
+	width: 120px;
+}
+
 .non-pointer {
 	pointer-events: none;
 
