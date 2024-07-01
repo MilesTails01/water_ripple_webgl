@@ -24,8 +24,3 @@ npm run build -- for building a minified js
 npm run start -- for testing the app in electron
 npm run make -- for building the app as an executeable
 ```
-
-# Download
-
-You can download a 1280*720 px version as *.exe file that was build with electron-forge:
-[here](https://drive.google.com/file/d/1JVkBG3nB-EtdLuX5VSg7x7rAes5qOPq_/view?usp=sharing)
