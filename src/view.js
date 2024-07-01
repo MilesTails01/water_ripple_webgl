@@ -1,3 +1,6 @@
+import * as utils from './utils.js';
+import logo from './img/logo.svg';
+
 export class VIEW 
 {
 	constructor()
@@ -17,6 +20,7 @@ export class VIEW
 		this.canvas 	= document.createElement('canvas');
 		this.canvas.id	= "shader-canvas";
 		this.gl			= this.canvas.getContext('webgl2');
+		this.logo		= utils.htmlToElement(`<img src="${logo}" class="logo" />`);
 
 		if (!this.gl) 											{ console.error('need webgl2'); 					}
 		if (!this.gl.getExtension('EXT_color_buffer_float')) 	{ console.error('need EXT_color_buffer_float'); 	}
@@ -27,6 +31,7 @@ export class VIEW
 		this.gl.clear(this.gl.COLOR_BUFFER_BIT);
 
 		document.body.appendChild(this.canvas);
+		document.body.appendChild(this.logo);
 
 		this.resize();
     	window.addEventListener('resize', this.resize.bind(this));

@@ -1,5 +1,4 @@
 import './css/style.css';
-import './comps/css/logo.css';
 
 import { VIEW } 	from './view.js';
 import { Shader } 	from './shader';
