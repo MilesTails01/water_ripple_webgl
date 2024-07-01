@@ -1,0 +1,51 @@
+{
+	"name": "water_ripple_webgl",
+	"productName": "water_ripple_webgl",
+	"private": true,
+	"version": "0.0.0",
+	"authors": "Tommy Dräger",
+	"description": "a ps2 like water effect in webgl",
+	"type": "commonjs",
+	"main": "main.js",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder"
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "^6.3.0",
+		"@electron-forge/maker-deb": "^6.3.0",
+		"@electron-forge/maker-rpm": "^6.3.0",
+		"@electron-forge/maker-squirrel": "^6.3.0",
+		"@electron-forge/maker-zip": "^6.3.0",
+		"@electron-forge/plugin-auto-unpack-natives": "^6.3.0",
+		"electron": "^25.5.0",
+		"electron-builder": "^24.6.3",
+		"vite": "^4.4.5"
+	},
+	"dependencies": {
+		"electron-squirrel-startup": "^1.0.0",
+		"smooth-scrollbar": "^8.8.4"
+	},
+	"build": {
+		"appId": "water_ripple_webgl",
+		"productName": "visual prototype",
+		"directories": {
+			"output": "build"
+		},
+		"win": {
+			"target": [
+				"nsis"
+			]
+		},
+		"nsis": {
+			"oneClick": false,
+			"allowToChangeInstallationDirectory": true
+		}
+	}
+}

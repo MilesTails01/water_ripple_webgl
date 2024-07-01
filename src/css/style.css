@@ -1,0 +1,68 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: antiquewhite;
+	/* overflow: hidden; */
+	height: 100%;
+}
+
+canvas {
+	background: radial-gradient(circle, rgb(100, 100, 100) 0%, rgb(48, 48, 48) 100%);
+	box-sizing: border-box;
+	/* position: fixed; */
+	/* z-index: 0; */
+}
+
+.app {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-overlay {
+	/* position: absolute; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	flex-grow: 1;
+	flex-shrink: 0;
+	margin: 0;
+	pointer-events: none;
+}
+
+.logo {
+	width: 120px;
+}
+
+.non-pointer {
+	pointer-events: none;
+
+}
+
+.non-select {
+	user-select: none;
+}
